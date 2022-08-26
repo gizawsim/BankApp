@@ -13,12 +13,12 @@ public class AppPreferencesHelper implements PreferencesHelper{
     }
 
     @Override
-    public void setNameState(Boolean isFather) {
-        mPrefs.edit().putBoolean(PREF_NAME_STATE, isFather).apply();
+    public void setLogin(Boolean isLogin) {
+        mPrefs.edit().putBoolean(PREF_NAME_STATE, isLogin).apply();
     }
 
     @Override
-    public Boolean getNameState() {
+    public Boolean getLogin() {
         return mPrefs.getBoolean(PREF_NAME_STATE, false);
     }
 

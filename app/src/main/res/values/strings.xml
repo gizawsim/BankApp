@@ -6,4 +6,7 @@
     <string name="keep_me_logged_in">Keep me logged in</string>
     <string name="image_of_logo">Image of Logo</string>
     <string name="go_to_login">Go to Login</string>
+    <string name="err_username">Please enter a username!</string>
+    <string name="err_password">Please enter a password!</string>
+    <string name="err_login">Invalid username or password. Please try again!</string>
 </resources>
