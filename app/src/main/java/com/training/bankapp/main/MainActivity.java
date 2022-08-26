@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        mainViewModel.txtName.observe(this, mBinding.btnMain::setText);
 
-        mBinding.btnMain.setOnClickListener(view -> openLogin());
+        mBinding.layoutMain.btnMain.setOnClickListener(view -> openLogin());
     }
 
     private void openLogin() {
