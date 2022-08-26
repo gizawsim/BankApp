@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.training.bankapp.App;
 import com.training.bankapp.databinding.ActivityMainBinding;
 import com.training.bankapp.login.LoginActivity;
 import com.training.bankapp.main.ui.MainViewModel;
@@ -30,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openLogin() {
+        App.getInstance().getDataManager().clear();
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
+        finishAffinity();
     }
 
 }
