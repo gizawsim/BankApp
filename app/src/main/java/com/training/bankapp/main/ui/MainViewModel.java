@@ -7,23 +7,15 @@ import com.training.bankapp.App;
 
 public class MainViewModel extends ViewModel {
 
-    public MutableLiveData<String> txtName = new MutableLiveData<>();
+    public MutableLiveData<String> urlImage = new MutableLiveData<>();
+
 
     public MainViewModel() {
-        setName();
+        setImage();
     }
 
-    public void setName() {
-        String name = "Osman";
-
-        if (App.getInstance().getDataManager().getNameState())
-            name = "Welela";
-        txtName.setValue(name);
-    }
-
-    public void onClickName() {
-        Boolean isFather = App.getInstance().getDataManager().getNameState();
-        App.getInstance().getDataManager().setNameState(!isFather);
-        setName();
+    public void setImage() {
+        String image = App.getInstance().getDataManager().getImageProfile();
+        urlImage.setValue(image);
     }
 }

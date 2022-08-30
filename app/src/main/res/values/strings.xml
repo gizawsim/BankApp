@@ -6,4 +6,35 @@
     <string name="keep_me_logged_in">Keep me logged in</string>
     <string name="image_of_logo">Image of Logo</string>
     <string name="go_to_login">Go to Login</string>
+    <string name="err_username">Please enter a username!</string>
+    <string name="err_password">Please enter a password!</string>
+    <string name="err_login">Invalid username or password. Please try again!</string>
+    <string name="logout">Logout</string>
+    <string name="map">Map</string>
+    <string name="messaging">Messaging</string>
+    <string name="image">Image</string>
+    <string name="animation">Animation</string>
+
+    <string name="enter_phone">09XX XX XX XX</string>
+    <string name="enter_email">example@gmail.com</string>
+    <string name="enter_message">Enter your message here…</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="send_message">Send Message</string>
+
+    <string name="tab_title_1">Lottie</string>
+    <string name="tab_title_2">Rotate</string>
+
+    <string name="pick_image">Pick Image</string>
+    <string name="_0">0</string>
+    <string name="err_message_type">Please select message type!</string>
+    <string name="err_message_to">Please enter a recipient contact!</string>
+    <string name="err_message_txt">Please enter a message to send!</string>
+    <string name="err_phone">Please enter a valid phone number!</string>
+    <string name="err_email">Please enter a valid email!</string>
+    <string name="msg_logout">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="msg_success">Message sent!</string>
+    <string name="msg_failure">\"Message Not Sent: \"</string>
 </resources>

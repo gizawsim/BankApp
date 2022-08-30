@@ -2,8 +2,11 @@ package com.training.bankapp;
 
 import android.app.Application;
 
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.net.PlacesClient;
 import com.training.bankapp.data.AppDataManager;
 import com.training.bankapp.data.DataManager;
+import com.training.bankapp.framework.util.AppConstants;
 
 public class App extends Application {
 
