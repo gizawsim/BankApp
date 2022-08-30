@@ -2,9 +2,10 @@ package com.training.bankapp.data.remote;
 
 
 import io.reactivex.Observable;
-import okhttp3.Response;
-import retrofit2.Retrofit;
+import okhttp3.ResponseBody;
+import retrofit2.Response;
 
 public interface ApiHelper {
-    Observable<Response> performLogin();
+    Observable<Response<ResponseBody>> performLogin();
+    Observable<Response<ResponseBody>> getImages();
 }

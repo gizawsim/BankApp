@@ -11,7 +11,8 @@ import com.training.bankapp.framework.util.rx.SchedulerProvider;
 
 import io.reactivex.Observable;
 import io.reactivex.disposables.CompositeDisposable;
-import okhttp3.Response;
+import okhttp3.ResponseBody;
+import retrofit2.Response;
 
 public class AppDataManager implements DataManager {
 
@@ -48,13 +49,18 @@ public class AppDataManager implements DataManager {
     }
 
     @Override
-    public void clear() {
-        mPrefHelper.clear();
+    public void setImageProfile(String imageProfile) {
+        mPrefHelper.setImageProfile(imageProfile);
     }
 
     @Override
-    public Observable<Response> performLogin() {
-        return mApiHelper.performLogin();
+    public String getImageProfile() {
+        return mPrefHelper.getImageProfile();
+    }
+
+    @Override
+    public void clear() {
+        mPrefHelper.clear();
     }
 
     @Override
@@ -65,5 +71,15 @@ public class AppDataManager implements DataManager {
     @Override
     public CompositeDisposable getCompositeDisposable() {
         return mCompositeDisposable;
+    }
+
+    @Override
+    public Observable<Response<ResponseBody>> performLogin() {
+        return mApiHelper.performLogin();
+    }
+
+    @Override
+    public Observable<Response<ResponseBody>> getImages() {
+        return mApiHelper.getImages();
     }
 }

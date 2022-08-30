@@ -17,7 +17,7 @@ import com.training.bankapp.main.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    ActivityLoginBinding mBinding;
+    private ActivityLoginBinding mBinding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,9 +27,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         LoginViewModel loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+        setUp();
+    }
 
+    private void setUp() {
         mBinding.btnLogin.setOnClickListener(view -> checkInput());
-
         if (App.getInstance().getDataManager().getLogin()) {
             openMain();
         }

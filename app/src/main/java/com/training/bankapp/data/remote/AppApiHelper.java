@@ -4,14 +4,16 @@ import android.content.Context;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.training.bankapp.data.local.prefs.PreferencesHelper;
+import com.training.bankapp.framework.util.AppConstants;
 
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
-import okhttp3.Response;
+import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -53,7 +55,7 @@ public class AppApiHelper implements ApiHelper {
     private Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-//                    .baseUrl(BuildConfig.BASE_URL)
+                    .baseUrl(AppConstants.BASE_URL)
                     .client(configureTimeouts())
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -67,7 +69,12 @@ public class AppApiHelper implements ApiHelper {
     }
 
     @Override
-    public Observable<okhttp3.Response> performLogin() {
+    public Observable<Response<ResponseBody>> performLogin() {
         return getApiService().performLogin();
+    }
+
+    @Override
+    public Observable<Response<ResponseBody>> getImages() {
+        return getApiService().fetchImages();
     }
 }

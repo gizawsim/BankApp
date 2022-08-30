@@ -8,6 +8,8 @@ public final class ApiEndPoint {
 //    public static final String OTP_LOGIN = "/auth.otp.send/";
     public static final String LOGIN = "/auth/";
 
+    public static final String IMAGES = "images";
+
 
     private ApiEndPoint() {
         // This class is not publicly instantiable

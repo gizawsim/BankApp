@@ -7,5 +7,8 @@ public interface PreferencesHelper {
     void setAccessToken(String token);
     String getAccessToken();
 
+    void setImageProfile(String imageProfile);
+    String getImageProfile();
+
     void clear();
 }
